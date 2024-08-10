@@ -1,0 +1,85 @@
+
+Apartment Listing Application
+This project is a full-stack application for listing apartments. It includes a backend server built with Node.js, Express, and PostgreSQL, and integrates with both a frontend web application and a mobile application. The app allows users to list, view, and manage apartment listings.
+
+Features
+List Apartments: Retrieve a list of all apartments stored in the PostgreSQL database.
+Apartment Details: View details for a specific apartment by its ID.
+Add New Apartment: Add a new apartment listing to the database.
+Technologies Used
+Backend: Node.js, Express.js, PostgreSQL
+Frontend: next.js
+Mobile: React Native
+Docker: Docker is used to containerize the backend, frontend, and mobile applications.
+Project Structure
+.
+├── backend
+│   ├── index.js                # Entry point for the backend server
+│   ├── package.json            # Node.js dependencies and scripts
+│   └── Dockerfile              # Dockerfile for building the backend container
+├── frontend
+│   ├── ...                     # Frontend code and assets
+│   └── Dockerfile              # Dockerfile for building the frontend container
+├── mobile
+│   ├── ...                     # Mobile app code and assets
+│   └── Dockerfile              # Dockerfile for building the mobile container
+└── docker-compose.yml          # Docker Compose configuration
+
+
+Prerequisites
+Docker: Ensure that Docker is installed on your machine.
+Docker Compose: Make sure Docker Compose is installed, which is typically bundled with Docker.
+Running the Application
+
+To run the entire application stack (backend, frontend, and mobile) using Docker, follow these steps:
+
+Clone the repository:
+
+git clone <repository-url>
+cd <repository-directory>
+
+Build and start the containers:
+
+sudo docker-compose up --build
+This command will build and start the Docker containers for the backend, frontend, and mobile applications. All containers will be connected on the same network, allowing them to communicate with each other.
+
+Access the application:
+
+Backend API: Accessible at http://localhost:3001
+Frontend: Accessible at http://localhost:3000
+Mobile: Accessible at http://localhost:8081
+
+API Endpoints
+List All Apartments
+
+Endpoint: GET /api/apartments
+Description: Retrieves a list of all apartments.
+Response: JSON array of apartment objects.
+
+Get Apartment Details
+Endpoint: GET /api/apartments/:id
+Description: Retrieves details for a specific apartment by its ID.
+Response: JSON object of the apartment.
+
+Add New Apartment
+Endpoint: POST /api/apartments
+Description: Adds a new apartment to the database.
+Request Body:
+{
+  "name": "Apartment Name",
+  "address": "Apartment Address",
+  "price": 1000,
+  "area": 1200,
+  "bedrooms_count": 3,
+  "bathrooms_count": 2,
+  "furnished": true,
+  "ownership": "Owned",
+  "description": "A brief description of the apartment",
+  "logo": "URL_to_logo_image"
+}
+
+Response: JSON object of the newly created apartment.
+
+Notes
+Ensure that the PostgreSQL database is properly set up and configured in your environment.
+Adjust the Docker Compose configuration and environment variables as needed for your specific setup.

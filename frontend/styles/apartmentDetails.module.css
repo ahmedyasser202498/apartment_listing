@@ -1,0 +1,173 @@
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container-fluid {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0px auto;
+}
+
+.logoContainer {
+    margin-bottom: 16px;
+    height: 500px;
+}
+
+.mainContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.nameContainer {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 70px;
+    padding-top: 16px;
+    z-index: 11;
+}
+
+.details {
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+
+.detailsSide {
+    width: calc(100% - 320px);
+    flex: 1 1 0%;
+}
+
+.specificDetails {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.propertyDetails {
+    width: 100%;
+    padding: 0px 16px;
+}
+
+.columnDetails {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.columnDetails .header {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 8px;
+    font-family: materialBold;
+    font-size: 20px;
+    color: rgb(30, 65, 100);
+    border-style: solid;
+    border-color: rgb(33, 36, 39);
+    border-image: initial;
+    border-width: 0px 0px 0.5px;
+}
+
+.columnDetails .rowData:nth-child(2n) {
+    background-color: rgb(244, 244, 244);
+}
+
+.columnDetails .rowData {
+    width: 100%;
+    padding: 8px 4px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-family: materialMedium;
+    font-size: 14px;
+    color: rgb(33, 36, 39);
+    border-style: solid;
+    border-color: rgb(230, 230, 230);
+    border-image: initial;
+    border-width: 0px 0px 0.5px;
+}
+
+
+  
+  .header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .header img {
+    height: 70px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+  }
+
+  .address {
+    color: rgb(100, 100, 100);
+    font-family: 'materialRegular';
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .logo2 {
+    width: 100%;
+    height: 100%; 
+  }
+  
+  
+
+  
+  .price {
+    font-size: 1.5rem;
+    color: #e91e63;
+    font-weight: bold;
+  }
+  
+  .cardDetails {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .cardDetails div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .cardDetails img {
+    width: 24px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .cardDetails span {
+    font-size: 1rem;
+    color: #333;
+  }
+  

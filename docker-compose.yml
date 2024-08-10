@@ -1,0 +1,54 @@
+version: '3'
+services:
+  db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_DB: apartments
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: yourpassword
+    volumes:
+      - ./backend/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    ports:
+      - "5435:5432"
+    networks:
+      - app-network
+      
+  backend:
+    build: ./backend
+    ports:
+      - "3001:3001"
+    networks:
+      - app-network
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 5435
+      DB_USER: postgres
+      DB_PASSWORD: yourpassword
+      DB_NAME: apartments
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  mobile:
+    build: ./mobile
+    ports:
+      - "8081:8081"
+    networks:
+      - app-network
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+
+networks:
+  app-network:
+    driver: bridge
