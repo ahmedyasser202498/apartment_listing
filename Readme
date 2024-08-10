@@ -1,16 +1,20 @@
 
 Apartment Listing Application
+
 This project is a full-stack application for listing apartments. It includes a backend server built with Node.js, Express, and PostgreSQL, and integrates with both a frontend web application and a mobile application. The app allows users to list, view, and manage apartment listings.
 
 Features
 List Apartments: Retrieve a list of all apartments stored in the PostgreSQL database.
 Apartment Details: View details for a specific apartment by its ID.
 Add New Apartment: Add a new apartment listing to the database.
+
 Technologies Used
+
 Backend: Node.js, Express.js, PostgreSQL
 Frontend: next.js
 Mobile: React Native
 Docker: Docker is used to containerize the backend, frontend, and mobile applications.
+
 Project Structure
 .
 ├── backend
@@ -27,8 +31,10 @@ Project Structure
 
 
 Prerequisites
+
 Docker: Ensure that Docker is installed on your machine.
 Docker Compose: Make sure Docker Compose is installed, which is typically bundled with Docker.
+
 Running the Application
 
 To run the entire application stack (backend, frontend, and mobile) using Docker, follow these steps:
@@ -41,6 +47,7 @@ cd <repository-directory>
 Build and start the containers:
 
 sudo docker-compose up --build
+
 This command will build and start the Docker containers for the backend, frontend, and mobile applications. All containers will be connected on the same network, allowing them to communicate with each other.
 
 Access the application:
